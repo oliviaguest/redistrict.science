@@ -72,15 +72,49 @@ L.featureGroup([mymarker, polyline])
     })
     .addTo(mymap);
 
-var topoLayer = new L.TopoJSON();
+// var topoLayer = new L.TopoJSON();
 
-$.getJSON('http://127.0.0.1:4000/json/topo/USA_5000.topo.json')
-    .done(addTopoData);
+// $.getJSON('http://127.0.0.1:4000/json/topo/USA.topo.json')
+//     .done(addTopoData);
+//
+// function addTopoData(topoData) {
+//     topoLayer.addData(topoData);
+//     topoLayer.addTo(mymap);
+// }
 
-function addTopoData(topoData) {
-    topoLayer.addData(topoData);
-    topoLayer.addTo(mymap);
+var usa = 'http://127.0.0.1:4000/json/geo/USA.geo.json'
+
+
+
+function getColor(d) {
+    return d == "4201" ? '#800026' :
+           d > 500  ? '#BD0026' :
+           d > 200  ? '#E31A1C' :
+           d > 100  ? '#FC4E2A' :
+           d > 50   ? '#FD8D3C' :
+           d > 20   ? '#FEB24C' :
+           d > 10   ? '#FED976' :
+                      '#FFEDA0';
 }
+
+function style(feature) {
+    return {
+        fillColor: getColor(feature.properties.GEOID),
+        weight: 2,
+        opacity: 1,
+        color: 'white',
+        dashArray: '3',
+        fillOpacity: 0.7
+    };
+}
+
+fetch(
+  usa
+).then(
+  res => res.json()
+).then(
+  data => L.geoJSON(data, {style: style}).addTo(mymap)
+)
 
 // var USA = 'http://127.0.0.1:4000/topojson/USA.topojson'
 // fetch(
