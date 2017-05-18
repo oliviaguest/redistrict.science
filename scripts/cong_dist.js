@@ -74,7 +74,7 @@ L.featureGroup([mymarker, polyline])
 
 var topoLayer = new L.TopoJSON();
 
-$.getJSON('http://127.0.0.1:4000/topojson/USA.topojson')
+$.getJSON('http://127.0.0.1:4000/json/topo/USA_5000.topo.json')
     .done(addTopoData);
 
 function addTopoData(topoData) {
