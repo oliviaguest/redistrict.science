@@ -6,3 +6,4 @@ layout: default
 ---
 <div id="mapid"></div>
 <script src="./scripts/cong_dist.js"></script>
+<!-- <script src="./scripts/test.js"></script> -->
