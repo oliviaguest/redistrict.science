@@ -68,4 +68,12 @@ $on-laptop:        780px;
         "syntax-highlighting"
 ;
 
-#mapid { height: 400px; }
+.map {
+  width:700px;
+  height: 400px;
+}
+.synch-map {
+width: 350px;
+height: 400px;
+display: inline-block;
+}
