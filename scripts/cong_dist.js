@@ -145,6 +145,17 @@ fetch(
         });
     }
 )
+var outline_layer = L.geoJson(null, {
+  style: cluster_style,
+  onEachFeature: onEachFeature
+});
+var outline_layer1 = L.geoJson(null, {
+  style: cluster_style,
+  onEachFeature: onEachFeature
+});
+omnivore.topojson('/json/topo/state_outlines.topo.json', null, outline_layer).addTo(map);
+omnivore.topojson('/json/topo/state_outlines.topo.json', null, outline_layer1).addTo(map1);
+
 
 // reset zoom from https://github.com/alanshaw/leaflet-zoom-min/
 map.addControl(new L.Control.ZoomMin())
