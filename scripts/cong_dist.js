@@ -58,7 +58,7 @@ function usa_style(feature) {
         weight: 1,
         opacity: 0.8,
         color: 'white',
-        // dashArray: '3',
+        dashArray: '3',
         fillOpacity: 0.5
     };
 }
@@ -69,11 +69,21 @@ function cluster_style(feature) {
         weight: 1,
         opacity: 0.8,
         color: 'white',
-        // dashArray: '3',
+        ashArray: '3',
         fillOpacity: 0.5
     };
 }
 
+function state_style(feature) {
+    return {
+        fillColor: 'white',
+        weight: 1,
+        opacity: 0.8,
+        color: 'white',
+        // dashArray: '3',
+        fillOpacity: 0
+    };
+}
 function highlightFeature(e) {
     var layer = e.target;
 
@@ -146,11 +156,11 @@ fetch(
     }
 )
 var outline_layer = L.geoJson(null, {
-  style: cluster_style,
+  style: state_style,
   onEachFeature: onEachFeature
 });
 var outline_layer1 = L.geoJson(null, {
-  style: cluster_style,
+  style: state_style,
   onEachFeature: onEachFeature
 });
 omnivore.topojson('/json/topo/state_outlines.topo.json', null, outline_layer).addTo(map);
