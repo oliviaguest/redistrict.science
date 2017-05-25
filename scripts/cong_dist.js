@@ -16,7 +16,7 @@ var map1 = L.map('map1', {
 });
 var options = {
     attribution: '',
-    pane: 'bottom'
+    // pane: 'bottom'
 
 };
 
@@ -73,7 +73,7 @@ function cluster_style(feature) {
 function highlightFeature(e) {
     var layer = e.target;
     layer.setStyle({
-        // weight: 1.5,
+        weight: 2,
         color: 'black'
         // dashArray: '0',
         // fillOpacity: 0.1
