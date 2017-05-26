@@ -35,17 +35,17 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
     accessToken: 'pk.eyJ1Ijoib2xpdmlhZ3Vlc3QiLCJhIjoiY2oycnhmbmhrMDAxeDJ6cjRlejNlcnc3ayJ9.HF6u5SpQSIrNhuQzdinNsQ'
 }).addTo(map1);
 
-var scale = chroma.scale('PuBUGn')//['lightblue', 'darkgreen', 'black'])
-.domain([...Array(53).keys()]);
+var scale = chroma.scale('PuBUGn') //['lightblue', 'darkgreen', 'black'])
+    .domain([...Array(53).keys()]);
 
 
 // Set the colour for the style of the GeoJSON for each congressional district:
 function getColor(d) {
-  // f = chroma.scale(['violet', '#501935', 'pink', 'purple', 'lightblue', '#430019', '#d8ffff', 'darkblue', 'hotpink']).mode('lch').domain([0, 78]);
-  // f = chroma.scale(['lightblue', 'darkgreen']).mode('lch').domain([0, 55]);
-  f = chroma.random();
-  return f;
-  // return scale(parseInt(d.charAt(2) + d.charAt(3)));
+    // f = chroma.scale(['violet', '#501935', 'pink', 'purple', 'lightblue', '#430019', '#d8ffff', 'darkblue', 'hotpink']).mode('lch').domain([0, 78]);
+    // f = chroma.scale(['lightblue', 'darkgreen']).mode('lch').domain([0, 55]);
+    f = chroma.random();
+    return f;
+    // return scale(parseInt(d.charAt(2) + d.charAt(3)));
 }
 // Set the style for each congressional district:
 function cong_dist_style(feature) {
@@ -98,6 +98,7 @@ function resetHighlight(e) {
 function zoomToFeature(e) {
     map.fitBounds(e.target.getBounds());
 }
+
 function onEachFeature(feature, layer) {
     layer.on({
         mouseover: highlightFeature,
@@ -120,27 +121,46 @@ var cluster_layer = L.geoJson(null, {
     // onEachFeature: onEachFeature,
     // pane: 'middle1'
 });
-fetch(
-    '/json/states_hash.json'
-).then(
-    function(res) {
-        res.json().then(function(dict) {
-            console.log(dict);
-            for (key in dict) {
-                console.log('hello', dict[key], key);
-                var value = dict[key];
-                try {
-                    omnivore.topojson('/json/topo/' + key + '.topo.json', null, cluster_layer).addTo(map1);
-                } catch (err) {
-                    console.log('');
+// fetch(
+//     '/json/states_hash.json'
+// ).then(
+//     function(res) {
+//         res.json().then(function(dict) {
+//             console.log(dict);
+//             for (key in dict) {
+//                 // console.log('hello', dict[key], key);
+//                 var value = dict[key];
+//                 try {
+//                     omnivore.topojson('/json/topo/' + key + '.topo.json', null, cluster_layer).addTo(map1);
+//                 } catch (err) {
+//                     console.log('');
+//                 }
+//             }
+//         });
+//     }
+// )
+
+$.ajax({
+    url: "/json/topo/",
+    success: function(data) {
+        $(data).find("td > a").each(function() {
+            // will loop through
+            filename = $(this).attr("href");
+            if (filename.indexOf('.topo.json') !== -1) {
+                if (filename.indexOf('USA') == -1) {
+                    if (filename.indexOf('state_outlines') == -1) {
+                        // console.log(filename);
+                        omnivore.topojson('/json/topo/' + filename, null, cluster_layer).addTo(map1);
+                    }
                 }
             }
         });
     }
-)
+});
 // Add the state outlines to map and map1:
 map.createPane('top');
 map1.createPane('top');
+
 function state_style(feature) {
     return {
         fillColor: 'white',
