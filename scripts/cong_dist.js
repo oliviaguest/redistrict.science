@@ -58,10 +58,11 @@ function cong_dist_style(feature) {
         fillOpacity: 0.5
     };
 }
+
 // Set the style for each cluster:
 function cluster_style(feature) {
     return {
-        fillColor: 'black',
+        fillColor: getColor(feature.properties.Cluster),
         weight: 1,
         opacity: 1,
         color: 'white',
