@@ -122,42 +122,42 @@ var cluster_layer = L.geoJson(null, {
     // onEachFeature: onEachFeature,
     // pane: 'middle1'
 });
-// fetch(
-//     '/json/states_hash.json'
-// ).then(
-//     function(res) {
-//         res.json().then(function(dict) {
-//             console.log(dict);
-//             for (key in dict) {
-//                 // console.log('hello', dict[key], key);
-//                 var value = dict[key];
-//                 try {
-//                     omnivore.topojson('/json/topo/' + key + '.topo.json', null, cluster_layer).addTo(map1);
-//                 } catch (err) {
-//                     console.log('');
-//                 }
-//             }
-//         });
-//     }
-// )
-
-$.ajax({
-    url: "/private/json/topo/",
-    success: function(data) {
-        $(data).find("td > a").each(function() {
-            // will loop through
-            filename = $(this).attr("href");
-            if (filename.indexOf('.topo.json') !== -1) {
-                if (filename.indexOf('USA') == -1) {
-                    if (filename.indexOf('state_outlines') == -1) {
-                        console.log(filename);
-                        omnivore.topojson('/private/json/topo/' + filename, null, cluster_layer).addTo(map1);
-                    }
+fetch(
+    '/private/json/states_hash.json'
+).then(
+    function(res) {
+        res.json().then(function(dict) {
+            console.log(dict);
+            for (key in dict) {
+                // console.log('hello', dict[key], key);
+                var value = dict[key];
+                try {
+                    omnivore.topojson('/private/json/topo/' + key + '.topo.json', null, cluster_layer).addTo(map1);
+                } catch (err) {
+                    console.log('');
                 }
             }
         });
     }
-});
+)
+
+// $.ajax({
+//     url: "/private/json/topo/",
+//     success: function(data) {
+//         $(data).find("td > a").each(function() {
+//             // will loop through
+//             filename = $(this).attr("href");
+//             if (filename.indexOf('.topo.json') !== -1) {
+//                 if (filename.indexOf('USA') == -1) {
+//                     if (filename.indexOf('state_outlines') == -1) {
+//                         console.log(filename);
+//                         omnivore.topojson('/private/json/topo/' + filename, null, cluster_layer).addTo(map1);
+//                     }
+//                 }
+//             }
+//         });
+//     }
+// });
 // Add the state outlines to map and map1:
 map.createPane('top');
 map1.createPane('top');

@@ -9,5 +9,7 @@ do
   filename=$(basename "$file")
   extension="${filename##*.}"
   filename="${filename%.*.*}"
-  mapshaper "$file" -simplify 5% -o topo/"$filename".topo.json format=topojson
+  state=${filename:0:2}
+  echo "$state"
+  mapshaper "$file" -simplify 5% -o topo/"$state".topo.json format=topojson
 done
