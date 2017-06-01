@@ -151,7 +151,7 @@ $.ajax({
                 if (filename.indexOf('USA') == -1) {
                     if (filename.indexOf('state_outlines') == -1) {
                         // console.log(filename);
-                        omnivore.topojson('/json/topo/' + filename, null, cluster_layer).addTo(map1);
+                        omnivore.topojson('/private/json/topo/' + filename, null, cluster_layer).addTo(map1);
                     }
                 }
             }
