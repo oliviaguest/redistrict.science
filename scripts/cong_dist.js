@@ -114,7 +114,7 @@ var cong_dist_layer = L.geoJson(null, {
     // onEachFeature: onEachFeature,
     // pane: 'middle'
 });
-omnivore.topojson('/private/json/topo/USA.topo.json', null, cong_dist_layer).addTo(map);
+omnivore.topojson('/private/json/topo/US.topo.json', null, cong_dist_layer).addTo(map);
 // Add the clusters to map1:
 // map1.createPane('middle1');
 var cluster_layer = L.geoJson(null, {
@@ -122,6 +122,7 @@ var cluster_layer = L.geoJson(null, {
     // onEachFeature: onEachFeature,
     // pane: 'middle1'
 });
+
 fetch(
     '/private/json/states_hash.json'
 ).then(
@@ -184,8 +185,8 @@ var outline_layer1 = L.geoJson(null, {
     onEachFeature: onEachFeature,
 
 });
-omnivore.topojson('/private/json/topo/state_outlines.topo.json', null, outline_layer).addTo(map);
-omnivore.topojson('/private/json/topo/state_outlines.topo.json', null, outline_layer1).addTo(map1);
+omnivore.topojson('/private/json/topo/st.topo.json', null, outline_layer).addTo(map);
+omnivore.topojson('/private/json/topo/st.topo.json', null, outline_layer1).addTo(map1);
 // now pane order controls layer ordering not the control!
 // L.control.layers({
 //     'OSM': L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map)
