@@ -150,7 +150,7 @@ $.ajax({
             if (filename.indexOf('.topo.json') !== -1) {
                 if (filename.indexOf('USA') == -1) {
                     if (filename.indexOf('state_outlines') == -1) {
-                        // console.log(filename);
+                        console.log(filename);
                         omnivore.topojson('/private/json/topo/' + filename, null, cluster_layer).addTo(map1);
                     }
                 }
