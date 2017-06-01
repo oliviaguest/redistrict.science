@@ -48,7 +48,7 @@ code {
 
 pre {
   background: #f4f5f6;
-  border-left: 0.3rem solid #9b4dca;
+  border-left: 0.3rem solid #000000;
   overflow-y: hidden;
 }
 
@@ -262,12 +262,14 @@ fieldset {
 }
 
 a {
-  color: #9b4dca;
-  text-decoration: none;
+  color: #000000;
+  /*text-decoration: none;*/
 }
 
 a:focus, a:hover {
   color: #606c76;
+  text-decoration: none;
+
 }
 
 dl,
