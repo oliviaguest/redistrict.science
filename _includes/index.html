@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="column">
+      <h1>Gerrymandering Project</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="column">
+      <h2>Welcome</h2>
+
+      <p>This is the website accompanying the manuscript <i>Final title of our article</i> by <a href="//oliviaguest.com">Olivia Guest</a> and <a href="//bradlove.org">Bradley C. Love</a>.</p>
+
+      <p>For the code used, please see the GitHub repository, here: <a href="https://osf.io/95u8c/">https://osf.io/95u8c/</a>.
+      For the materials used, please see the Open Framework Repository (OSF), here: <a href="https://osf.io/95u8c/">https://osf.io/95u8c/</a>.</p>
+
+      <h2>Maps</h2>
+
+      <p>Below are interactive maps showing the existing districts (left column) and the results from our weighted <i>k</i>-means algorithm (right column).
+      The colors used are to facilitate viewing and are randomly assigned.
+      Moving your cursor over a state highlights its border in black.
+      Clicking on a state zooms both maps in, allowing you to see the state's districts close up for both reality and our solution.
+      To find a specific location click on the magnifying glass, on the top left of both maps, to open up a search box.</p>
+    </div>
+
+</div>
+
+<div class="row">
+  <div class="column">
+    <h3>Existing Solution</h3>
+    <div id="map" class="synch-map"></div>
+  </div>
+
+  <div class="column">
+    <h3>Clustering Solution</h3>
+    <div id="map1" class="synch-map"></div>
+  </div>
+</div>
+
+<script async="async" src="{{ site.baseurl }}/scripts/cong_dist.js"></script>
+<!-- <script src="./scripts/test.js"></script> -->

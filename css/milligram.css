@@ -18,8 +18,8 @@ html {
 }
 
 body {
-  color: #606c76;
-  font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  color: #000;
+  font-family: 'Montserrat', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-size: 1.6em;
   font-weight: 300;
   letter-spacing: .01em;
@@ -263,13 +263,11 @@ fieldset {
 
 a {
   color: #000000;
-  /*text-decoration: none;*/
+  text-decoration: none;
 }
 
 a:focus, a:hover {
-  color: #888888;
   text-decoration: none;
-
 }
 
 dl,
@@ -345,12 +343,27 @@ p {
   margin-top: 0;
 }
 
+p a {
+  -webkit-transition-property: border, background; /* Safari */
+  -webkit-transition-duration: 1s; /* Safari */
+  transition-property: border, background;
+  transition-duration: 1s;
+  border-bottom: 1px solid #000;
+  background: #fff;
+}
+
+p a:focus, p a:hover {
+  border-bottom: 2px solid #eee;
+  background: #eee;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+  font-family: 'Lora', serif;
   font-weight: 300;
   letter-spacing: -.1rem;
   margin-bottom: 2.0rem;
@@ -406,6 +419,16 @@ img {
 
 .float-right {
   float: right;
+}
+
+#credit {
+
+  font-size: 1.5rem;
+}
+.columns {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
 }
 
 /*# sourceMappingURL=milligram.css.map */
