@@ -259,6 +259,9 @@ fieldset {
     margin-bottom: inherit;
     padding: 0 1.0rem;
   }
+  h1 {
+    font-size: 4rem;
+  }
 }
 
 a {
@@ -375,6 +378,13 @@ h1 {
   line-height: 1.2;
 }
 
+@media (max-width: 40rem) {
+  h1 {
+    font-size: 4rem;
+    /*color: red;*/
+  }
+}
+
 h2 {
   font-size: 3.6rem;
   line-height: 1.25;
@@ -432,3 +442,8 @@ img {
 }
 
 /*# sourceMappingURL=milligram.css.map */
+
+
+h1 {
+  padding-bottom: 2rem;
+}

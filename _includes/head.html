@@ -6,14 +6,10 @@
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-  <!-- evil icon -->
-
-  <link rel="stylesheet" href="{{"/assets/evil-icons.min.css" | prepend:site.baseurl }}">
-  <script src="{{"/assets/evil-icons.min.js" | prepend:site.baseurl }}"></script>
 
   <!-- todo: include this into main.css -->
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Lora|Montserrat:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora|Montserrat:300,300i" rel="stylesheet">
 
   <!-- CSS Reset -->
   <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
