@@ -259,9 +259,6 @@ fieldset {
     margin-bottom: inherit;
     padding: 0 1.0rem;
   }
-  h1 {
-    font-size: 4rem;
-  }
 }
 
 a {
@@ -353,11 +350,13 @@ p a {
   transition-duration: 1s;
   border-bottom: 1px solid #000;
   background: #fff;
+  border-top: 1px solid #fff;
 }
 
 p a:focus, p a:hover {
   border-bottom: 2px solid #eee;
   background: #eee;
+  border-top: 2px solid #eee;
 }
 
 h1,
@@ -374,14 +373,21 @@ h6 {
 }
 
 h1 {
-  font-size: 4.6rem;
+  font-size: 4rem;
   line-height: 1.2;
+}
+@media (min-width: 40rem) {
+  h1 {
+    font-size: 4.6rem;
+  }
+  .single-column-visible {
+    display: none;
+  }
 }
 
 @media (max-width: 40rem) {
-  h1 {
-    font-size: 4rem;
-    /*color: red;*/
+  .single-column-hidden {
+    display: none;
   }
 }
 
@@ -446,4 +452,8 @@ img {
 
 h1 {
   padding-bottom: 2rem;
+}
+
+emph {
+    font-style: italic;
 }
