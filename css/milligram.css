@@ -457,3 +457,9 @@ h1 {
 emph {
     font-style: italic;
 }
+
+#authors {
+    margin-top: -3.25rem;
+    margin-bottom: 2rem;
+    font-size: 1.45rem;
+}
