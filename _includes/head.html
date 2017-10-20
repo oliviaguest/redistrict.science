@@ -13,13 +13,13 @@
 
   <!-- CSS Reset -->
   <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
-
+  <link rel="stylesheet" href="{{ "/css/likely.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/css/milligram.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
-
+  <script src="{{ "/scripts/likely.js" | prepend: site.baseurl }}" type="text/javascript">
 
 
   {% include scripts.html %}

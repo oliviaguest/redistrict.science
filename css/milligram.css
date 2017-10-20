@@ -450,16 +450,20 @@ img {
 /*# sourceMappingURL=milligram.css.map */
 
 
-h1 {
-  padding-bottom: 2rem;
-}
-
 emph {
     font-style: italic;
 }
 
 #authors {
-    margin-top: -3.25rem;
-    margin-bottom: 2rem;
+    margin-top: -1.5rem;
     font-size: 1.45rem;
+}
+
+.likely {
+    margin-bottom: 2rem;
+
+}
+
+h2 {
+    padding-top: 2rem;
 }
