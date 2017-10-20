@@ -3,7 +3,9 @@
       <h1>Gerrymandering and<br>
         Computational Redistricting</h1>
         <div id="authors">Olivia Guest, Frank J. Kanayet, and Bradley C. Love</div>
-        {% include social.html %}
+        {% if page.share %}
+          {% include social.html %}
+        {% endif %}
 
     </div>
 </div>
@@ -52,9 +54,15 @@
 
 <div class="row">
   <div class="column">
-    {% include social.html %}
-
-    <h2>Comments</h2>
-      {% include disqus.html %}
+    {% if page.share %}
+      {% include social.html %}
+    {% endif %}
+    {% if page.comments %}
+      <h2>Comments</h2>
+        {% include disqus.html %}
+    {% endif %}
+    {% if page.share %}
+      {% include social.html %}
+    {% endif %}
   </div>
 </div>
