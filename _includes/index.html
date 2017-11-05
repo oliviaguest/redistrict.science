@@ -57,12 +57,125 @@
     {% if page.share %}
       {% include social.html %}
     {% endif %}
+  </div>
+</div>
+
+<div class="row">
+  <!-- <div class="column">
+    <h2>Authors</h2>
+      <ul class="outer">
+        <li class="outer">
+          <div class="author_image">
+          <img src="//avatars3.githubusercontent.com/u/5082092?v=3&s=460"
+          title="Olivia Guest" alt="Olivia Guest">
+          </div>
+          <h3 id ="author">Olivia Guest</h3>
+          <ul class="inner">
+            <li class="inner">Website: <a href="//oliviaguest.comt">oliviaguest.com</a></li>
+            <li class="inner">Twitter: <a href="//twitter.com/o_guest">o_guest</a></li>
+          </ul>
+        </li>
+        <li class="outer">
+          <div class="author_image">
+          <img src="//media.licdn.com/media/AAEAAQAAAAAAAAWbAAAAJGJiYWIzYzg0LTAxY2MtNDQ4MS1iYWExLWRhYmQxNzdjY2ZjMA.jpg"
+          title="Frank J. Kanayet" alt="Frank J. Kanayet">
+          </div>
+          <h3 id ="author">Frank J. Kanayet</h3>
+          <ul class="inner">
+            <li class="inner"><a href="//scholar.google.com/citations?user=olyAU-cAAAAJ">Google Scholar</a></li>
+          </ul>
+        </li>
+        <li class="outer">
+          <div class="author_image">
+          <img src="//bradlove.org/images/people/brad.jpg"
+          title="Bradley C. Love" alt="Bradley C. Love">
+          </div>
+          <h3 id ="author">Bradley C. Love</h3>
+          <ul class="inner">
+            <li class="inner">Website: <a href="//bradlove.org">bradlove.org</a></li>
+            <li class="inner">Twitter: <a href="//twitter.com/DrLoveBC">DrLoveBC</a></li>
+          </ul>
+        </li>
+      </ul>
+  </div> -->
+
+  <div class="column">
+
+  <form id="gform" method="POST" class="pure-form pure-form-stacked" data-email="example@email.net"
+  action="https://script.google.com/macros/s/AKfycbzyUYt--_jBuZCGtyT00nbXBvkGLSEnCFdZ4TCNp1VxKY-7ozP7/exec">
+    <!-- change the form action to your script url -->
+
+      <!--input id must be honeypot or else it wont work-->
+      <label class="sr-only">Keep this field blank</label>
+      <input id="honeypot" type="text" name="honeypot" value="" />
+
+
+    <fieldset class="pure-group">
+      <label for="name">Name: </label>
+      <input id="name" name="name" placeholder="What your Mom calls you" />
+    </fieldset>
+
+    <fieldset class="pure-group">
+      <label for="message">Message: </label>
+      <textarea id="message" name="message" rows="10"
+      placeholder="Tell us what's on your mind..."></textarea>
+    </fieldset>
+
+    <fieldset class="pure-group">
+      <label for="email"><em>Your</em> Email Address:</label>
+      <input id="email" name="email" type="email" value=""
+      required placeholder="your.name@email.com"/>
+      <span id="email-invalid" style="display:none">
+        Must be a valid email address</span>
+    </fieldset>
+
+    <fieldset class="pure-group">
+      <label for="color">Favourite Color: </label>
+      <input id="color" name="color" placeholder="green" />
+    </fieldset>
+
+    <button class="button-success pure-button button-xlarge">
+      <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+
+  </form>
+
+  <!-- Customise the Thankyou Message People See when they submit the form: -->
+  <div style="display:none;" id="thankyou_message">
+    <h2><em>Thanks</em> for contacting us!
+      We will get back to you soon!</h2>
+  </div>
+
+  <!-- Submit the Form to Google Using "AJAX" -->
+  <script data-cfasync="false" type="text/javascript"
+  src="{{ "/scripts/form-submission-handler.js" | prepend: site.baseurl }}"></script>
+
+
+  <!-- <script data-cfasync="false" type="text/javascript"
+  src="/form-submission-handler.js"></script> -->
+<!-- END -->
+  </div>
+
+
+  <div class="column">
     {% if page.comments %}
       <h2>Comments</h2>
         {% include disqus.html %}
     {% endif %}
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="column">
     {% if page.share %}
       {% include social.html %}
     {% endif %}
   </div>
 </div>
+
+
+
+<h3>Client side IP geolocation using <a href="http://ipinfo.io">ipinfo.io</a></h3>
+<div id="ip"></div>
+<div id="address"></div>
+Full response: <pre id="details"></pre>

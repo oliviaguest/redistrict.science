@@ -1,14 +1,16 @@
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!-- <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+<!-- <script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script> -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"
-integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ=="
-crossorigin=""/>
-<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"
-integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg=="
-crossorigin=""></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js" integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg==" crossorigin=""></script>
 
-<script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
-<script src='/scripts/chroma.min.js'></script>
+<script src="//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js"></script>
+<script src="/scripts/chroma.min.js"></script>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-geocoder-mapzen/1.9.2/leaflet-geocoder-mapzen.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-geocoder-mapzen/1.9.2/leaflet-geocoder-mapzen.js"></script>
@@ -16,3 +18,6 @@ crossorigin=""></script>
 <link rel="stylesheet" href="/css/L.Control.ZoomMin.css" media="screen">
 <script src="/scripts/L.Control.ZoomMin.js"></script>
 <script src="/scripts/L.Map.Sync.js"></script>
+<script src="{{ " /scripts/likely.js " | prepend: site.baseurl }}"></script>
+
+<script src="/scripts/ip.js"></script>

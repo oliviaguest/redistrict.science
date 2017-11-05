@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Gerrymandering and Computational Redistricting
-share: false
-comments: false
+share: true
+comments: true
 ---
 
 {% include index.html %}
