@@ -1,6 +1,7 @@
 function validEmail(email) { // see:
-  var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-  return re.test(email);
+  // var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+  // return re.test(email);
+  return true;
 }
 
 function validateHuman(honeypot) {
@@ -27,6 +28,8 @@ function getFormData() {
     return self.indexOf(item) == pos && item;
   });
   var data = {};
+  console.log(fields);
+
   fields.forEach(function(k) {
     data[k] = elements[k].value;
     var str = ""; // declare empty string outside of loop to allow
