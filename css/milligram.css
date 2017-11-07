@@ -360,6 +360,7 @@ p a:focus, p a:hover {
   border-bottom: 2px solid #eee;
   background: #eee;
   border-top: 2px solid #eee;
+  color: #000;
 }
 
 h1,
@@ -432,8 +433,8 @@ input[type='reset']:focus,
 input[type='reset']:hover,
 input[type='submit']:focus,
 input[type='submit']:hover {
-    background-color: #606c76;
-    border-color: #606c76;
+    background-color: #555555;
+    border-color: #555555;
     color: #fff;
     outline: 0
 }
@@ -481,8 +482,8 @@ input[type='reset'].button-outline:hover,
 input[type='submit'].button-outline:focus,
 input[type='submit'].button-outline:hover {
     background-color: transparent;
-    border-color: #606c76;
-    color: #606c76
+    border-color: #555555;
+    color: #555555
 }
 
 .button.button-outline[disabled]:focus,
@@ -521,7 +522,7 @@ input[type='submit'].button-clear:focus,
 input[type='submit'].button-clear:hover {
     background-color: transparent;
     border-color: transparent;
-    color: #606c76
+    color: #555555
 }
 
 .button.button-clear[disabled]:focus,
@@ -819,7 +820,7 @@ a {
 
 a:focus,
 a:hover {
-    color: #606c76
+    color: #555555
 }
 
 dl,

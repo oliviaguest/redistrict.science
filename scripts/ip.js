@@ -1,4 +1,4 @@
-$.get('https://ipinfo.io/json', function(response) {
+var user = $.get('https://ipinfo.io/json', function(response) {
   // $('#ip').html('IP: ' + response.ip);
   // $('#address').html('Location: ' + response.city + ', ' + response.region);
   // $('#details').html(JSON.stringify(response, null, 4));
@@ -17,6 +17,23 @@ $.get('https://ipinfo.io/json', function(response) {
 
 }, 'jsonp');
 
+user.always(function(res) {
+  console.log(res);
+  $.getJSON('/json/states_hash.json', function(dict) {
+      // console.log(res); // this will show the info it in firebug console
+        for (key in dict) {
+          var value = dict[key];
+          $('#state').append($('<option/>').attr("value", key).text(dict[key] + ' (' + key + ')'));
+          if (res.region == dict[key]) {
+            $('#state').val(key);
+          }
+        }
+
+
+
+
+  });
+});
 
 // // Put state names into the drop down list:
 // fetch(
@@ -33,19 +50,3 @@ $.get('https://ipinfo.io/json', function(response) {
 //
 //   }
 // )
-
-$.getJSON('/json/states_hash.json', function(dict) {
-    // console.log(res); // this will show the info it in firebug console
-      for (key in dict) {
-        var value = dict[key];
-        $('#state').append($('<option/>').attr("value", key).text(dict[key] + ' (' + key + ')'));
-
-      }
-      $('#state').val('AR');
-
-});
-
-
-$( document ).ready(function() {
-  console.log($('#state').val);
-});
