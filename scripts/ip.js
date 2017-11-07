@@ -23,10 +23,10 @@ user.always(function(res) {
       // console.log(res); // this will show the info it in firebug console
         for (key in dict) {
           var value = dict[key];
-          $('#state').append($('<option/>').attr("value", key).text(dict[key] + ' (' + key + ')'));
+          $('#state').append($('<option/>').attr('value', key).text(dict[key] + ' (' + key + ')'));
           if (res.region == dict[key]) {
             $('#state').val(key);
-            $('#feedback').style('display:true');
+            $('#feedback').css('display','inherit');
           }
         }
 
@@ -44,7 +44,7 @@ user.always(function(res) {
 //     res.json().then(function(dict) {
 //       for (key in dict) {
 //         var value = dict[key];
-//         $('#state').append($('<option/>').attr("value", key).text(dict[key] + ' (' + key + ')'));
+//         $('#state').append($('<option/>').attr('value', key).text(dict[key] + ' (' + key + ')'));
 //
 //       }
 //     });
