@@ -11,3 +11,13 @@ display: inline-block;
 .top {
     padding-top: 5rem;
 }
+
+::-moz-selection { /* Code for Firefox */
+    color: white;
+    background: black;
+}
+
+::selection {
+    color: white;
+    background: black;
+}

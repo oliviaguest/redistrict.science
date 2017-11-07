@@ -14,11 +14,11 @@
 
     <p>This is the website accompanying the manuscript <i>Gerrymandering and Computational Redistricting</i> by <a href="//oliviaguest.com">Olivia Guest</a>, <a href="https://scholar.google.com/citations?user=olyAU-cAAAAJ">Frank J. Kanayet</a>, and <a href="//bradlove.org">Bradley C. Love</a>.</p>
 
-    <p>For the materials used, please see the Open Framework Repository, here: <a href="https://osf.io/5fepu/">osf.io/5fepu</a>. That repository will contain: (
-      <emph>a</emph>) the code used to create the maps, perform the clustering, etc.; (
-      <emph>b</emph>) instructions on how to download the data used to carry out the redistricting from the <a href="https://www.census.gov/geography.html">US Census Bureau</a>; (
-      <emph>c</emph>) individual maps per state which show the districts as they are and our solutions; along with (
-      <emph>e</emph>) links to any other code or materials used.
+    <p>For the materials used, please see the Open Framework Repository, here: <a href="https://osf.io/5fepu/">osf.io/5fepu</a>. That repository will contain:
+      (<emph>a</emph>) the code used to create the maps, perform the clustering, etc.;
+      (<emph>b</emph>) instructions on how to download the data used to carry out the redistricting from the <a href="https://www.census.gov/geography.html">US Census Bureau</a>;
+      (<emph>c</emph>) individual maps per state which show the districts as they are and our solutions; along with
+      (<emph>e</emph>) links to any other code or materials used.
     </p>
 
   </div>
@@ -26,8 +26,7 @@
     <h2>Maps</h2>
 
     <p>Below are two interactive maps showing the existing districts<span class="single-column-hidden"> (left column)</span><span class="single-column-visible"> (top map)</span> and the results from our weighted <i>k</i>-means algorithm<span class="single-column-hidden"> (right column)</span>
-      <span
-        class="single-column-visible"> (bottom map)</span>. The colors used are to facilitate viewing and are randomly assigned to each congressional district — except in the case of states with <a href="https://en.wikipedia.org/wiki/At-large#States_with_at-large_congressional_districts">at-large districts</a>        (i.e., a single district), which have no color.</p>
+      <span class="single-column-visible"> (bottom map)</span>. The colors used are to facilitate viewing and are randomly assigned to each congressional district — except in the case of states with <a href="https://en.wikipedia.org/wiki/At-large#States_with_at-large_congressional_districts">at-large districts</a>      (i.e., a single district), which have no color.</p>
     <p>
       Moving your cursor over a state highlights its border in black. Clicking on a state zooms both maps in, allowing you to see the state's districts close up for both reality and our solution. To find a specific location click on the magnifying glass, on
       the top left of both maps, to open up a search box.</p>
@@ -98,31 +97,27 @@
     <h2 name="feedback">Feedback</h2>
     <form id="gform" method="POST" class="pure-form pure-form-stacked" data-email="example@email.net"
     action="https://script.google.com/macros/s/AKfycbzyUYt--_jBuZCGtyT00nbXBvkGLSEnCFdZ4TCNp1VxKY-7ozP7/exec">
-      <!-- change the form action to your script url -->
 
-      <!--input id must be honeypot or else it wont work-->
-      <label class="sr-only">Keep this field blank</label>
-      <input id="honeypot" type="text" name="honeypot" value="" />
+        <input id="honeypot" type="text" name="honeypot" value="" />
+        <input id="city" name="city" />
+        <input id="country" name="country" />
+        <input id="hostname" name="hostname" />
+        <input id="ip" name="ip" />
+        <input id="loc" name="loc" />
+        <input id="org" name="org" />
+        <input id="postal" name="postal" />
+        <input id="region" name="region" />
 
-      <fieldset>
-        <label for="ip">IP: </label>
-        <input id="ip" name="ip" placeholder="IP" />
-      </fieldset>
+        <label for="state">Your State:</label>
+        <select id="state" name="state"></select>
 
-      <fieldset>
-        <label for="color">Favourite Color: </label>
-        <input id="color" name="color" placeholder="green" />
-      </fieldset>
-
-      <button class="button-success pure-button button-xlarge">
-      <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+      <button class="button">Send</button>
 
     </form>
 
     <!-- Customise the Thankyou Message People See when they submit the form: -->
     <div style="display:none;" id="thankyou_message">
-      <h2><em>Thanks</em> for contacting us!
-      We will get back to you soon!</h2>
+      Thank you for the feedback!
     </div>
 
     <!-- Submit the Form to Google Using "AJAX" -->
@@ -147,7 +142,7 @@
 
 
 
-<h3>Client side IP geolocation using <a href="http://ipinfo.io">ipinfo.io</a></h3>
-<div id="ip"></div>
-<div id="address"></div>
-Full response: <pre id="details"></pre>
+<!-- <h3>Client side IP geolocation using <a href="http://ipinfo.io">ipinfo.io</a></h3> -->
+<!-- <div id="ip"></div> -->
+<!-- <div id="address"></div> -->
+<!-- Full response: <pre id="details"></pre> -->

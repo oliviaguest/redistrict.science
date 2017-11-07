@@ -128,14 +128,14 @@ fetch(
 ).then(
   function(res) {
     res.json().then(function(dict) {
-      console.log(dict);
+      // console.log(dict);
       for (key in dict) {
         // console.log('hello', dict[key], key);
         var value = dict[key];
         try {
           omnivore.topojson('/json/topo/' + key + '.topo.json', null, cluster_layer).addTo(map1);
         } catch (err) {
-          console.log('');
+          // console.log('');
         }
       }
     });
