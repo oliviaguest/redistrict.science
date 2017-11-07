@@ -26,6 +26,7 @@ user.always(function(res) {
           $('#state').append($('<option/>').attr("value", key).text(dict[key] + ' (' + key + ')'));
           if (res.region == dict[key]) {
             $('#state').val(key);
+            $('#feedback').style('display:true');
           }
         }
 
