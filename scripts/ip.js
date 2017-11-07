@@ -17,18 +17,27 @@ var user = $.get('https://ipinfo.io/json', function(response) {
 
 }, 'jsonp');
 
+
+
 user.always(function(res) {
   console.log(res);
   $.getJSON('/json/states_hash.json', function(dict) {
-      // console.log(res); // this will show the info it in firebug console
-        for (key in dict) {
-          var value = dict[key];
-          $('#state').append($('<option/>').attr('value', key).text(dict[key] + ' (' + key + ')'));
-          if (res.region == dict[key]) {
-            $('#state').val(key);
-            $('#feedback').css('display','inherit');
-          }
-        }
+
+    //
+    // NOTE: This should be deleted for primetime!!!
+    $('#feedback').css('display', 'initial');
+    //
+    //
+
+    // console.log(res); // this will show the info it in firebug console
+    for (key in dict) {
+      var value = dict[key];
+      $('#state').append($('<option/>').attr('value', key).text(dict[key] + ' (' + key + ')'));
+      if (res.region == dict[key]) {
+        $('#state').val(key);
+        $('#feedback').css('display', 'initial');
+      }
+    }
 
 
 

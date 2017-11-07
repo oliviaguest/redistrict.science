@@ -13,14 +13,29 @@
 
   <!-- CSS Reset -->
   <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
-  <link rel="stylesheet" href="{{ "/css/likely.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "/css/milligram.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ " /css/likely.css " | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ " /css/milligram.css " | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ " /css/style.css " | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ " /feed.xml " | prepend: site.baseurl | prepend: site.url }}">
 
 
 
-  {% include scripts.html %}
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js" integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg==" crossorigin=""></script>
+
+  <script src="//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js"></script>
+  <script src="/scripts/chroma.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-geocoder-mapzen/1.9.2/leaflet-geocoder-mapzen.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-geocoder-mapzen/1.9.2/leaflet-geocoder-mapzen.js"></script>
+  <link rel="stylesheet" href="/css/L.Control.ZoomMin.css" media="screen">
+
+  <script src="{{ " /scripts/L.Control.ZoomMin.js " | prepend: site.baseurl }}"></script>
+  <script src="{{ " /scripts/L.Map.Sync.js " | prepend: site.baseurl }}"></script>
+  <script src="{{ " /scripts/likely.js " | prepend: site.baseurl }}"></script>
+  <script src="{{ " /scripts/ip.js " | prepend: site.baseurl }}"></script>
 
 </head>
