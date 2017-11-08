@@ -2,22 +2,45 @@
   width: 100%;
   height: 400px;
 }
+
 .synch-map {
-width: 100%;
-height: 400px;
-display: inline-block;
+  width: 100%;
+  height: 400px;
+  display: inline-block;
 }
 
 .top {
-    padding-top: 5rem;
+  padding-top: 5rem;
 }
 
-::-moz-selection { /* Code for Firefox */
-    color: white;
-    background: black;
+::-moz-selection {
+  /* Code for Firefox */
+  color: white;
+  background: black;
 }
 
 ::selection {
-    color: white;
-    background: black;
+  color: white;
+  background: black;
+}
+
+.plots {
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.cong-dist {
+  filter: contrast(130%) grayscale(100%);
+  -webkit-filter: contrast(130%) grayscale(100%);
+  -moz-filter: contrast(130%) grayscale(100%);
+  -ms-filter: contrast(130%) grayscale(100%);
+  -o-filter: contrast(130%) grayscale(100%);
+}
+
+div#map, div#map1 {
+    border-radius: .4rem;
+}
+
+button#submit {
+    margin-top: 3rem;
 }

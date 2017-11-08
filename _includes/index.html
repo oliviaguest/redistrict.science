@@ -14,11 +14,11 @@
 
     <p>This is the website accompanying the manuscript <i>Gerrymandering and Computational Redistricting</i> by <a href="//oliviaguest.com">Olivia Guest</a>, <a href="https://scholar.google.com/citations?user=olyAU-cAAAAJ">Frank J. Kanayet</a>, and <a href="//bradlove.org">Bradley C. Love</a>.</p>
 
-    <p>For the materials used, please see the Open Framework Repository, here: <a href="https://osf.io/5fepu/">osf.io/5fepu</a>. That repository will contain:
-      (<emph>a</emph>) the code used to create the maps, perform the clustering, etc.;
-      (<emph>b</emph>) instructions on how to download the data used to carry out the redistricting from the <a href="https://www.census.gov/geography.html">US Census Bureau</a>;
-      (<emph>c</emph>) individual maps per state which show the districts as they are and our solutions; along with
-      (<emph>e</emph>) links to any other code or materials used.
+    <p>For the materials used, please see the Open Framework Repository, here: <a href="https://osf.io/5fepu/">osf.io/5fepu</a>. That repository will contain: (
+      <emph>a</emph>) the code used to create the maps, perform the clustering, etc.; (
+      <emph>b</emph>) instructions on how to download the data used to carry out the redistricting from the <a href="https://www.census.gov/geography.html">US Census Bureau</a>; (
+      <emph>c</emph>) individual maps per state which show the districts as they are and our solutions; along with (
+      <emph>e</emph>) links to any other code or materials used.
     </p>
 
   </div>
@@ -95,23 +95,36 @@
 
   <div id="feedback" name="feedback" class="column" style="display:none">
     <h2>Feedback</h2>
-    <form id="gform" method="POST" class="pure-form pure-form-stacked" data-email="example@email.net"
-    action="https://script.google.com/macros/s/AKfycbzyUYt--_jBuZCGtyT00nbXBvkGLSEnCFdZ4TCNp1VxKY-7ozP7/exec">
+    <form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbzyUYt--_jBuZCGtyT00nbXBvkGLSEnCFdZ4TCNp1VxKY-7ozP7/exec">
 
-        <input id="honeypot" type="text" name="honeypot" value="" style="display:none" />
-        <input id="city" name="city" style="display:none" />
-        <input id="country" name="country" style="display:none" />
-        <input id="hostname" name="hostname" style="display:none" />
-        <input id="ip" name="ip" style="display:none" />
-        <input id="loc" name="loc" style="display:none" />
-        <input id="org" name="org" style="display:none" />
-        <input id="postal" name="postal" style="display:none" />
-        <input id="region" name="region" style="display:none" />
+      <input id="honeypot" type="text" name="honeypot" value="" style="display:none" />
+      <input id="city" name="city" style="display:none" />
+      <input id="country" name="country" style="display:none" />
+      <input id="hostname" name="hostname" style="display:none" />
+      <input id="ip" name="ip" style="display:none" />
+      <input id="loc" name="loc" style="display:none" />
+      <input id="org" name="org" style="display:none" />
+      <input id="postal" name="postal" style="display:none" />
+      <input id="region" name="region" style="display:none" />
 
-        <label for="state">Your State:</label>
-        <select id="state" name="state"></select>
+      <label id="label-state" for="state">Select your state:</label>
+      <select id="state" name="state"></select>
 
-      <button class="button">Send</button>
+      <span id="radio" style="display:none" >
+        <label for="preference">Which of the following congressional district maps do you prefer?</label>
+        <div class="float-left plots" >
+          <img class="cong-dist" src="{{ " /images/congressional_district_plots/AL_cong_dist.png " | prepend: site.baseurl }}"/>
+          <input type="radio" name="preference" value="congdist"> Current districts
+        </div>
+        <div class="float-right plots">
+          <img class="" src="{{ " /images/best_plots/AL.png " | prepend: site.baseurl }}" />
+          <input type="radio" name="preference" value="clusters"> Clustering districts
+        </div>
+      </span>
+
+      <button id="next" type="button" value="Next">Next</button>
+
+      <button id="submit" type="submit" value="Submit" style="display:none">Submit</button>
 
     </form>
 
