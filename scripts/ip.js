@@ -60,3 +60,10 @@ user.always(function(res) {
 //
 //   }
 // )
+
+
+$.each(jsonFilesArray, function (i, jsonQuestID) {
+    $.getJSON("dialog/quest_"+ jsonQuestID +".json", function(json) {
+        //do stuff
+    });
+});
