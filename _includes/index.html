@@ -112,14 +112,22 @@
 
       <span id="radio" style="display:none" >
         <label for="preference">Which of the following congressional district maps do you prefer?</label>
-        <div class="float-left plots" >
-          <img class="cong-dist" src="{{ " /images/congressional_district_plots/AL_cong_dist.png " | prepend: site.baseurl }}"/>
-          <input type="radio" name="preference" value="congdist"> Current districts
-        </div>
-        <div class="float-right plots">
-          <img class="" src="{{ " /images/best_plots/AL.png " | prepend: site.baseurl }}" />
-          <input type="radio" name="preference" value="clusters"> Clustering districts
-        </div>
+
+        <label class="radio float-left plots">
+          <img id="cong-dist" class="cong-dist" />
+          <span class="radio-text">Real districts</span>
+
+          <input type="radio" name="preference" value="congdist">
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="radio float-right plots">
+          <img id="clusters" />
+          <span class="radio-text">Our clusters</span>
+          <input type="radio" name="preference" value="clusters">
+          <span class="checkmark"></span>
+        </label>
+
       </span>
 
       <button id="next" type="button" value="Next">Next</button>

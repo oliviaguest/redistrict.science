@@ -136,7 +136,10 @@ user.always(function (res) {
     }
 
     $('#state').change(function () {
-      console.log($('#state').find(":selected").val())
+      var selected = $('#state').find(":selected").val()
+      console.log(selected)
+      $('#cong-dist').attr("src", '/images/congressional_district_plots/' + selected + '_cong_dist.png')
+      $('#clusters').attr("src", '/images/best_plots/' + selected + '.png')
 
     })
 
@@ -154,8 +157,10 @@ function handleFormNext(event) { // handles form submit withtout any jquery
     return false;
   }
 
-  $('#clusters').css('display', 'initial')
-  $('#congdist').css('display', 'initial')
+  console.log(data.state)
+  $('#cong-dist').attr("src", '/images/congressional_district_plots/' + data.state + '_cong_dist.png')
+  $('#clusters').attr("src", '/images/best_plots/' + data.state + '.png')
+
   $('#submit').css('display', 'initial')
   $('#radio').css('display', 'initial')
   $('#next').css('display', 'none')
