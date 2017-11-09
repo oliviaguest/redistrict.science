@@ -157,10 +157,21 @@ var radio = document.getElementById('radio')
 radio.addEventListener("click", hideWarning, false)
 
 function placeImage(state) {
-  console.log(Math.random())
-  $('#left-image').attr("src", '/images/congressional_district_plots/' + state + '.png')
-  $('#right-image').attr("src", '/images/best_plots/' + state + '.png')
-  document.getElementById('clusters-right').value = 'True'
+  if (Math.random() > 0.5) {
+    $('#left-image').attr("src", '/images/congressional_district_plots/' + state + '.png')
+    $('#right-image').attr("src", '/images/best_plots/' + state + '.png')
+    document.getElementById('left-radio-text').innerHTML = 'The real districts'
+    document.getElementById('right-radio-text').innerHTML = 'Our clusters'
+    document.getElementById('clusters-right').value = 'True'
+  }
+  else {
+    $('#left-image').attr("src", '/images/best_plots/' + state + '.png')
+    $('#right-image').attr("src",'/images/congressional_district_plots/' + state + '.png')
+    document.getElementById('left-radio-text').innerHTML = 'Our clusters'
+    document.getElementById('right-radio-text').innerHTML = 'The real districts'
+    document.getElementById('clusters-right').value = 'False'
+  }
+
 }
 
 function hideWarning(event) {
