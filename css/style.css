@@ -162,3 +162,12 @@ button#submit {
   border-radius: 0.4rem;
 
 }
+
+ul.code {
+    list-style: none;
+    font-size: 5rem;
+}
+
+li.code {
+    display: inline;
+}
