@@ -23,8 +23,6 @@ twitter_username: o_guest
 twitter: o_guest
 github_username:  oliviaguest
 
-repository: oliviaguest/private
-
 
 # Build settings
 markdown: kramdown
@@ -39,4 +37,4 @@ google_analytics: UA-107428967-1
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
-disqus: district
+disqus: redistrict

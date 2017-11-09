@@ -1,7 +1,10 @@
-function validEmail(email) { // see:
+function validPreference(email) { // see:
   // var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
   // return re.test(email);
-  return true;
+  if (email === 'congdist' || email === 'clusters') {
+    return true
+  }
+  return false
 }
 
 function validateHuman(honeypot) {
@@ -71,8 +74,8 @@ function handleFormSubmit(event) { // handles form submit withtout any jquery
   }
 
 
-  if (!validEmail(data.email)) { // if email is not valid show error
-    document.getElementById('email-invalid').style.display = 'block';
+  if (!validPreference(data.preference)) { // if preference is not valid show error
+    document.getElementById('warning').style.display = 'block';
     return false;
   } else {
     var url = event.target.action; //
@@ -105,7 +108,7 @@ document.addEventListener('DOMContentLoaded', loaded, false);
 
 
 
-var user = $.get('https://ipinfo.io/json', function (response) {
+var user = $.get('https://ipinfo.io/json', function(response) {
   document.getElementById('city').value = response.city
   document.getElementById('country').value = response.country
   document.getElementById('hostname').value = response.hostname
@@ -116,9 +119,9 @@ var user = $.get('https://ipinfo.io/json', function (response) {
   document.getElementById('region').value = response.region
 }, 'jsonp')
 
-user.always(function (res) {
+user.always(function(res) {
   // console.log(res);
-  $.getJSON('/json/states_hash.json', function (dict) {
+  $.getJSON('/json/states_hash.json', function(dict) {
     // BUG
     // BUG: This should be deleted for primetime!!!
     $('#feedback').css('display', 'initial')
@@ -135,24 +138,33 @@ user.always(function (res) {
       }
     }
 
-    $('#state').change(function () {
+    $('#state').change(function() {
       var selected = $('#state').find(":selected").val()
       console.log(selected)
 
       placeImage(selected)
     })
 
-    var button = document.getElementById('next')
-    button.addEventListener("click", handleFormNext, false)
 
   })
 })
+
+
+var button = document.getElementById('next')
+button.addEventListener("click", handleFormNext, false)
+
+var radio = document.getElementById('radio')
+radio.addEventListener("click", hideWarning, false)
 
 function placeImage(state) {
   console.log(Math.random())
   $('#left-image').attr("src", '/images/congressional_district_plots/' + state + '.png')
   $('#right-image').attr("src", '/images/best_plots/' + state + '.png')
   document.getElementById('clusters-right').value = 'True'
+}
+
+function hideWarning(event) {
+  document.getElementById('warning').style.display = 'none';
 }
 
 function handleFormNext(event) { // handles form submit withtout any jquery
@@ -170,7 +182,7 @@ function handleFormNext(event) { // handles form submit withtout any jquery
   document.getElementById('preference-q').innerHTML = 'Which of the following congressional district maps do you prefer for ' + data.state + '?'
 
 
-  $('#submit').css('display', 'initial')
+  $('#submit').css('display', 'block')
   $('#radio').css('display', 'initial')
   $('#next').css('display', 'none')
   $('#state').css('display', 'none')

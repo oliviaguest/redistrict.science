@@ -81,7 +81,7 @@ button#submit {
   border: 0.1rem solid #fff;
   display: block;
   width: 100%;
-      padding: 1.25rem;
+  padding: 1.25rem;
 }
 
 
@@ -147,7 +147,18 @@ button#submit {
 
 /* Larger than mobile screen */
 
-  #state {
-    display: block;
-    width: auto;
-  }
+#state {
+  display: block;
+  width: auto;
+}
+
+#warning {
+  display: block;
+  color: red;
+  background-color: #ffefef;
+  width: fit-content;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 0.4rem;
+
+}

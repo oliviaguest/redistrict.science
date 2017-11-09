@@ -98,6 +98,10 @@
           </label>
         </div>
       </span>
+
+      <div id="warning" style="display:none">
+        Please choose a map you prefer!
+      </div>
   <input id="clusters-right" name="clusters-right" style="display:none" />
   <input id="url" name="url" style="display:none" value="{{ site.github.repository_url }}" />
 
@@ -115,7 +119,11 @@
 </div>
 
 </div>
-
+<div class="row">
+  <div class="column">
+    {% if page.share %} {% include social.html %} {% endif %}
+  </div>
+</div>
 <div class="row">
   <div class="column">
     {% if page.comments %}
