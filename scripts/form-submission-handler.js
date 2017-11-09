@@ -157,20 +157,20 @@ var radio = document.getElementById('radio')
 radio.addEventListener("click", hideWarning, false)
 
 function placeImage(state) {
-  if (Math.random() > 0.5) {
+  // if (Math.random() > 0.5) {
     $('#left-image').attr("src", '/images/congressional_district_plots/' + state + '.png')
     $('#right-image').attr("src", '/images/best_plots/' + state + '.png')
-    document.getElementById('left-radio-text').innerHTML = 'The real districts'
-    document.getElementById('right-radio-text').innerHTML = 'Our clusters'
+    document.getElementById('left-radio-text').innerHTML = 'Existing Solution'
+    document.getElementById('right-radio-text').innerHTML = 'Clustering Solution'
     document.getElementById('clusters-right').value = 'True'
-  }
-  else {
-    $('#left-image').attr("src", '/images/best_plots/' + state + '.png')
-    $('#right-image').attr("src",'/images/congressional_district_plots/' + state + '.png')
-    document.getElementById('left-radio-text').innerHTML = 'Our clusters'
-    document.getElementById('right-radio-text').innerHTML = 'The real districts'
-    document.getElementById('clusters-right').value = 'False'
-  }
+  // }
+  // else {
+    // $('#left-image').attr("src", '/images/best_plots/' + state + '.png')
+    // $('#right-image').attr("src",'/images/congressional_district_plots/' + state + '.png')
+    // document.getElementById('left-radio-text').innerHTML = 'Our clusters'
+    // document.getElementById('right-radio-text').innerHTML = 'The real districts'
+    // document.getElementById('clusters-right').value = 'False'
+  // }
 
 }
 
