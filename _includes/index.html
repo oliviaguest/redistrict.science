@@ -55,46 +55,16 @@
 </div>
 
 <div class="row">
-  <!-- <div class="column">
-    <h2>Authors</h2>
-      <ul class="outer">
-        <li class="outer">
-          <div class="author_image">
-          <img src="//avatars3.githubusercontent.com/u/5082092?v=3&s=460"
-          title="Olivia Guest" alt="Olivia Guest">
-          </div>
-          <h3 id ="author">Olivia Guest</h3>
-          <ul class="inner">
-            <li class="inner">Website: <a href="//oliviaguest.comt">oliviaguest.com</a></li>
-            <li class="inner">Twitter: <a href="//twitter.com/o_guest">o_guest</a></li>
-          </ul>
-        </li>
-        <li class="outer">
-          <div class="author_image">
-          <img src="//media.licdn.com/media/AAEAAQAAAAAAAAWbAAAAJGJiYWIzYzg0LTAxY2MtNDQ4MS1iYWExLWRhYmQxNzdjY2ZjMA.jpg"
-          title="Frank J. Kanayet" alt="Frank J. Kanayet">
-          </div>
-          <h3 id ="author">Frank J. Kanayet</h3>
-          <ul class="inner">
-            <li class="inner"><a href="//scholar.google.com/citations?user=olyAU-cAAAAJ">Google Scholar</a></li>
-          </ul>
-        </li>
-        <li class="outer">
-          <div class="author_image">
-          <img src="//bradlove.org/images/people/brad.jpg"
-          title="Bradley C. Love" alt="Bradley C. Love">
-          </div>
-          <h3 id ="author">Bradley C. Love</h3>
-          <ul class="inner">
-            <li class="inner">Website: <a href="//bradlove.org">bradlove.org</a></li>
-            <li class="inner">Twitter: <a href="//twitter.com/DrLoveBC">DrLoveBC</a></li>
-          </ul>
-        </li>
-      </ul>
-  </div> -->
+  <div class="column">
 
-  <div id="feedback" name="feedback" class="column" style="display:none">
-    <h2>Feedback</h2>
+    <div id="feedback" name="feedback" class="column" style="display:none">
+      <h2>Feedback</h2>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
     <form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbzyUYt--_jBuZCGtyT00nbXBvkGLSEnCFdZ4TCNp1VxKY-7ozP7/exec">
 
       <input id="honeypot" type="text" name="honeypot" value="" style="display:none" />
@@ -110,49 +80,47 @@
       <label id="label-state" for="state">Select your state:</label>
       <select id="state" name="state"></select>
 
-      <span id="radio" style="display:none" >
-        <label for="preference">Which of the following congressional district maps do you prefer?</label>
+      <span id="radio" style="display:none">
+        <label for="preference" id="preference-q"></label>
+        <div class="clearfix">
+          <label class="radio float-left plots">
+            <img id="left-image" />
+            <input type="radio" name="preference" value="congdist">
+            <span class="checkmark"></span>
+            <div class="radio-text">Real districts</div>
+          </label>
 
-        <label class="radio float-left plots">
-          <img id="cong-dist" class="cong-dist" />
-          <span class="radio-text">Real districts</span>
-
-          <input type="radio" name="preference" value="congdist">
-          <span class="checkmark"></span>
-        </label>
-
-        <label class="radio float-right plots">
-          <img id="clusters" />
-          <span class="radio-text">Our clusters</span>
-          <input type="radio" name="preference" value="clusters">
-          <span class="checkmark"></span>
-        </label>
-
+          <label class="radio float-right plots">
+            <img id="right-image" />
+            <input type="radio" name="preference" value="clusters">
+            <span class="checkmark"></span>
+            <div class="radio-text">Our clusters</div>
+          </label>
+        </div>
       </span>
+  <input id="clusters-right" name="clusters-right" style="display:none" />
+  <input id="url" name="url" style="display:none" value="{{ site.github.repository_url }}" />
 
-      <button id="next" type="button" value="Next">Next</button>
+  <button id="next" type="button" value="Next">Next</button>
 
-      <button id="submit" type="submit" value="Submit" style="display:none">Submit</button>
+  <button id="submit" type="submit" value="Submit" style="display:none">Submit</button>
 
-    </form>
-
-    <!-- Customise the Thankyou Message People See when they submit the form: -->
-    <div style="display:none;" id="thankyou_message">
-      Thank you for the feedback!
-    </div>
-
-    <!-- Submit the Form to Google Using "AJAX" -->
-    <script data-cfasync="false" type="text/javascript" src="{{ " /scripts/form-submission-handler.js " | prepend: site.baseurl }}"></script>
-
-
+  </form>
+  <!-- Customise the Thankyou Message People See when they submit the form: -->
+  <div style="display:none;" id="thankyou_message">
+    Thank you for the feedback!
   </div>
+  <!-- Submit the Form to Google Using "AJAX" -->
+  <script data-cfasync="false" type="text/javascript" src="{{ " /scripts/form-submission-handler.js " | prepend: site.baseurl }}"></script>
+</div>
 
+</div>
 
+<div class="row">
   <div class="column">
     {% if page.comments %}
     <h2>Comments</h2> {% include disqus.html %} {% endif %}
   </div>
-
 </div>
 
 <div class="row">

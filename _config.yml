@@ -23,6 +23,9 @@ twitter_username: o_guest
 twitter: o_guest
 github_username:  oliviaguest
 
+repository: oliviaguest/private
+
+
 # Build settings
 markdown: kramdown
 theme: minima

@@ -138,9 +138,8 @@ user.always(function (res) {
     $('#state').change(function () {
       var selected = $('#state').find(":selected").val()
       console.log(selected)
-      $('#cong-dist').attr("src", '/images/congressional_district_plots/' + selected + '_cong_dist.png')
-      $('#clusters').attr("src", '/images/best_plots/' + selected + '.png')
 
+      placeImage(selected)
     })
 
     var button = document.getElementById('next')
@@ -148,6 +147,13 @@ user.always(function (res) {
 
   })
 })
+
+function placeImage(state) {
+  console.log(Math.random())
+  $('#left-image').attr("src", '/images/congressional_district_plots/' + state + '.png')
+  $('#right-image').attr("src", '/images/best_plots/' + state + '.png')
+  document.getElementById('clusters-right').value = 'True'
+}
 
 function handleFormNext(event) { // handles form submit withtout any jquery
   event.preventDefault(); // we are submitting via xhr below
@@ -158,8 +164,11 @@ function handleFormNext(event) { // handles form submit withtout any jquery
   }
 
   console.log(data.state)
-  $('#cong-dist').attr("src", '/images/congressional_district_plots/' + data.state + '_cong_dist.png')
-  $('#clusters').attr("src", '/images/best_plots/' + data.state + '.png')
+
+  placeImage(data.state)
+
+  document.getElementById('preference-q').innerHTML = 'Which of the following congressional district maps do you prefer for ' + data.state + '?'
+
 
   $('#submit').css('display', 'initial')
   $('#radio').css('display', 'initial')

@@ -29,82 +29,107 @@
   box-sizing: border-box;
 }
 
-.cong-dist {
-  filter: contrast(130%) grayscale(100%);
-  -webkit-filter: contrast(130%) grayscale(100%);
-  -moz-filter: contrast(130%) grayscale(100%);
-  -ms-filter: contrast(130%) grayscale(100%);
-  -o-filter: contrast(130%) grayscale(100%);
-}
-
 div#map, div#map1 {
-    border-radius: .4rem;
+  border-radius: .4rem;
 }
 
 button#submit {
-    margin-top: 3rem;
+  margin-top: 3rem;
 }
+
 
 /* The radio */
+
 .radio {
-    display: block;
-    position: relative;
-    padding-left: 1rem;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding-top: 2rem;
 }
+
 
 /* Hide the browser's default radio button */
+
 .radio input {
-    position: absolute;
-    opacity: 0;
+  position: absolute;
+  opacity: 0;
 }
+
 
 /* Create a custom radio button */
+
 .checkmark {
-    position: absolute;
-    left: 0;
-    height: 21px;
-    width: 21px;
-    background-color: #eee;
-    border-radius: 50%;
+  margin-top: 2rem;
+  position: absolute;
+  left: 0;
+  height: 21px;
+  width: 21px;
+  background-color: #eee;
+  border-radius: 50%;
 }
+
+.radio:hover img {
+  border-radius: 0.4rem;
+  border: 0.1rem solid #d1d1d1;
+}
+
+.radio img {
+  border: 0.1rem solid #fff;
+  display: block;
+  width: 100%;
+      padding: 1.25rem;
+}
+
 
 /* On mouse-over, add a grey background color */
-.radio:hover input ~ .checkmark {
-    background-color: #ccc;
+
+.radio:hover input~.checkmark {
+  background-color: #ccc;
 }
+
 
 /* When the radio button is checked, add a blue background */
-.radio input:checked ~ .checkmark {
-    background-color: #555;
+
+.radio input:checked~.checkmark {
+  background-color: #555;
 }
+
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
+
 .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
+  content: "";
+  position: absolute;
+  display: none;
 }
 
+
 /* Style the indicator (dot/circle) */
+
 .radio .checkmark:after {
- 	top: 7px;
-	left: 7px;
-	width: 7px;
-	height: 7px;
-	border-radius: 50%;
-	background: white;
-}
-/* Show the indicator (dot/circle) when checked */
-.radio input:checked ~ .checkmark:after {
-    display: block;
+  top: 7px;
+  left: 7px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: white;
 }
 
+
+/* Show the indicator (dot/circle) when checked */
+
+.radio input:checked~.checkmark:after {
+  display: block;
+}
+
+
 /* Style the indicator (dot/circle) */
+
+
 /*.radio .checkmark:after {
  	top: 9px;
 	left: 9px;
@@ -114,6 +139,15 @@ button#submit {
 	background: white;
 }*/
 
-span.radio-text {
-    padding-left: 2.25rem;
+.radio-text {
+  padding-left: 3rem;
+  padding-top: 1.8rem;
 }
+
+
+/* Larger than mobile screen */
+
+  #state {
+    display: block;
+    width: auto;
+  }
