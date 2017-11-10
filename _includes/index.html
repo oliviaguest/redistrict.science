@@ -2,7 +2,15 @@
   <div class="column">
     <h1>Gerrymandering and<br>
         Computational Redistricting</h1>
-    <div id="authors">Olivia Guest, Frank J. Kanayet, and Bradley C. Love</div>
+    <div id="authors">Olivia Guest
+      <a href="//github.com/oliviaguest/" title="Olivia's GitHub" style="text-decoration:none;font-size:1.75rem"><i class="fa fa-github"></i></a>
+      <a href="//twitter.com/o_guest/" title="Olivia's Twitter" style="text-decoration:none;font-size:1.7rem"><i class="fa fa-twitter"></i></a>,
+      Frank J. Kanayet
+      <a href="//github.com/franink/" title="Frank's GitHub" style="text-decoration:none;font-size:1.75rem"><i class="fa fa-github"></i></a>,
+      and Bradley C. Love
+      <a href="//github.com/lovebc/" title="Brad's GitHub" style="text-decoration:none;font-size:1.75rem"><i class="fa fa-github"></i></a>
+      <a href="//twitter.com/DrLoveBC/" title="Brad's Twitter" style="text-decoration:none;font-size:1.7rem"><i class="fa fa-twitter"></i></a>
+    </div>
     {% if page.share %} {% include social.html %} {% endif %}
 
   </div>
@@ -35,7 +43,7 @@
     <h2>Maps</h2>
 
     <p>Below are two interactive maps showing the existing districts<span class="single-column-hidden"> (left column)</span><span class="single-column-visible"> (top map)</span> and the results from our weighted <i>k</i>-means algorithm<span class="single-column-hidden"> (right column)</span>
-      <span class="single-column-visible"> (bottom map)</span>. The colors used are to facilitate viewing and are randomly assigned to each congressional district — except in the case of states with <a href="https://en.wikipedia.org/wiki/At-large#States_with_at-large_congressional_districts">at-large districts</a>      (i.e., a single district), which have no color.</p>
+      <span class="single-column-visible"> (bottom map)</span>. The colors used are to facilitate viewing and are randomly assigned to each congressional district — except in the case of states with at-large districts(i.e., a single district), which have no color.</p>
     <p>
       Moving your cursor over a state highlights its border in black. Clicking on a state zooms both maps in, allowing you to see the state's districts close up for both reality and our solution. To find a specific location click on the magnifying glass, on
       the top left of both maps, to open up a search box.</p>
@@ -66,6 +74,7 @@
     <div id="feedback" name="feedback" class="column" style="display:none">
       <h2>US citizens, have your say!</h2>
       <p><i>Do you prefer your state’s existing solution for districting or the clustering solution?</i></p>
+
     </div>
 </div>
 
