@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /test.html
+Allow: /images/whole_usa.png
 Disallow: /
