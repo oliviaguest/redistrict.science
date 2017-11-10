@@ -15,7 +15,9 @@
 # in the templates via {{ site.myvariable }}.
 title: Gerrymandering and Computational Redistricting
 email: o.guest@ucl.ac.uk
-description: > # this means to ignore newlines until "baseurl:"
+description: Partisan gerrymandering poses a threat to democracy. One solution is using computers to draw the district lines instead of relying on politicians. To learn more about gerrymandering and our computer-based solution, please read "Gerrymandering and Computational Redistricting" by Olivia Guest, Frank J. Kanayet, and Bradley C. Love. This interactive website accompanies that paper and shows how computers can improve the districting process.
+
+
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://redistrict.science" # the base hostname & protocol for your site, e.g. http://example.com
