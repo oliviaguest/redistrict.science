@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', loaded, false);
 
 
 
-var user = $.get('https://ipinfo.io/json', function(response) {
+var user = $.get('https://ipinfo.io?token=f26b5ab20fec6f', function(response) {
   document.getElementById('city').value = response.city
   document.getElementById('country').value = response.country
   document.getElementById('hostname').value = response.hostname
