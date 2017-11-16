@@ -14,6 +14,7 @@ var map1 = L.map('map1', {
   zoomControl: false
 
 });
+
 var options = {
   attribution: '',
   // pane: 'bottom'
@@ -35,8 +36,8 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
   accessToken: 'pk.eyJ1Ijoib2xpdmlhZ3Vlc3QiLCJhIjoiY2oycnhmbmhrMDAxeDJ6cjRlejNlcnc3ayJ9.HF6u5SpQSIrNhuQzdinNsQ'
 }).addTo(map1);
 
-var scale = chroma.scale('PuBUGn') //['lightblue', 'darkgreen', 'black'])
-  .domain([...Array(53).keys()]);
+// var scale = chroma.scale('PuBUGn') //['lightblue', 'darkgreen', 'black'])
+//   .domain([...Array(53).keys()]);
 
 
 // Set the colour for the style of the GeoJSON for each congressional district:
