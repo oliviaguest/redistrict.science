@@ -124,6 +124,8 @@ button.addEventListener("click", handleFormNext, false)
 var radio = document.getElementById('radio')
 radio.addEventListener("click", hideWarning, false)
 
+// NOTE: add an event listener for the submit button to disallow multiple (accidental) clicks, thus avoiding many entries by same person.
+
 function placeImage(state) {
   // if (Math.random() > 0.5) {
     $('#left-image').attr("src", '/images/congressional_district_plots/' + state + '.png')
