@@ -180,3 +180,25 @@ text-align: center;
 display: block;
 padding-bottom: 2rem;
 }
+
+button.leaflet-control-geocoder-icon:hover {
+  background-color: #f4f4f4;
+  border-color: unset;
+  color: unset;
+  outline: unset;
+}
+button.leaflet-control-geocoder-icon {
+padding: 0;
+}
+
+input[type="text"] {
+  margin-bottom: 0;
+  padding: 0;
+  height: unset;
+  position: relative;
+  top: -0.2em;
+}
+
+
+.leaflet-control-geocoder-form input
+{}

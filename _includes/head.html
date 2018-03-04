@@ -37,10 +37,12 @@
   <script src="//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js"></script>
   <script src="/scripts/chroma.min.js"></script>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-geocoder-mapzen/1.9.2/leaflet-geocoder-mapzen.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-geocoder-mapzen/1.9.2/leaflet-geocoder-mapzen.js"></script>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-geocoder-mapzen/1.9.2/leaflet-geocoder-mapzen.css"> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-geocoder-mapzen/1.9.2/leaflet-geocoder-mapzen.js"></script> -->
   <link rel="stylesheet" href="/css/L.Control.ZoomMin.css" media="screen">
+  <link rel="stylesheet" href="/css/L.Control.Geocoder.css" media="screen">
 
+  <script src="{{ " /scripts/L.Control.Geocoder.js " | prepend: site.baseurl }}"></script>
   <script src="{{ " /scripts/L.Control.ZoomMin.min.js " | prepend: site.baseurl }}"></script>
   <script src="{{ " /scripts/L.Map.Sync.min.js " | prepend: site.baseurl }}"></script>
   <script src="{{ " /scripts/likely.min.js " | prepend: site.baseurl }}"></script>

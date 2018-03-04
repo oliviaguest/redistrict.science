@@ -22,8 +22,12 @@ var options = {
 };
 
 // https://github.com/mapzen/leaflet-geocoder
-L.control.geocoder('mapzen-cykEQVu', options).addTo(map);
-L.control.geocoder('mapzen-cykEQVu', options).addTo(map1);
+L.Control.geocoder().addTo(map);
+L.Control.geocoder().addTo(map1);
+
+
+control = new L.Control.Geocoder({ geocoder: null }),
+
 
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
   attribution: '',
