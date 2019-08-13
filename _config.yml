@@ -19,7 +19,7 @@ description: Partisan gerrymandering poses a threat to democracy. One solution i
 
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://redistrict.science" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://redistrict.science" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: o_guest
 twitter: o_guest
 github_username:  oliviaguest
