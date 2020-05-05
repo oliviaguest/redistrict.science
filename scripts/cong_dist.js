@@ -29,14 +29,21 @@ L.Control.geocoder().addTo(map1);
 control = new L.Control.Geocoder({ geocoder: null }),
 
 
-L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
   attribution: '',
-  id: 'mapbox.light',
+  tileSize: 512,
+  maxZoom: 18,
+  zoomOffset: -1,
+  id: 'mapbox/streets-v11',
   accessToken: 'pk.eyJ1Ijoib2xpdmlhZ3Vlc3QiLCJhIjoiY2oycnhmbmhrMDAxeDJ6cjRlejNlcnc3ayJ9.HF6u5SpQSIrNhuQzdinNsQ'
 }).addTo(map);
-L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-  id: 'mapbox.light',
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+  // id: 'mapbox.light',
   attribution: '',
+  tileSize: 512,
+  maxZoom: 18,
+  zoomOffset: -1,
+  id: 'mapbox/streets-v11',
   accessToken: 'pk.eyJ1Ijoib2xpdmlhZ3Vlc3QiLCJhIjoiY2oycnhmbmhrMDAxeDJ6cjRlejNlcnc3ayJ9.HF6u5SpQSIrNhuQzdinNsQ'
 }).addTo(map1);
 
