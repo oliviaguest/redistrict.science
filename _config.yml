@@ -18,8 +18,8 @@ email: o.guest@ucl.ac.uk
 description: Partisan gerrymandering poses a threat to democracy. One solution is using computers to draw the district lines instead of relying on politicians.
 
 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://redistrict.science" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/redistrict.science" # the subpath of your site, e.g. /blog
+url: "https://oliviaguest.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: o_guest
 twitter: o_guest
 github_username:  oliviaguest
