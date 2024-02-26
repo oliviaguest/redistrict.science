@@ -126,7 +126,7 @@ var cong_dist_layer = L.geoJson(null, {
   // onEachFeature: onEachFeature,
   // pane: 'middle'
 });
-omnivore.topojson('/json/topo/US.topo.json', null, cong_dist_layer).addTo(map);
+omnivore.topojson('/redistrict.science/json/topo/US.topo.json', null, cong_dist_layer).addTo(map);
 // Add the clusters to map1:
 // map1.createPane('middle1');
 var cluster_layer = L.geoJson(null, {
@@ -136,7 +136,7 @@ var cluster_layer = L.geoJson(null, {
 });
 
 fetch(
-  '/json/states_hash.json'
+  '/redistrict.science/json/states_hash.json'
 ).then(
   function(res) {
     res.json().then(function(dict) {
@@ -145,7 +145,7 @@ fetch(
         // console.log('hello', dict[key], key);
         var value = dict[key];
         try {
-          omnivore.topojson('/json/topo/' + key + '.topo.json', null, cluster_layer).addTo(map1);
+          omnivore.topojson('/redistrict.science/json/topo/' + key + '.topo.json', null, cluster_layer).addTo(map1);
         } catch (err) {
           // console.log('');
         }
@@ -197,8 +197,8 @@ var outline_layer1 = L.geoJson(null, {
   onEachFeature: onEachFeature,
 
 });
-omnivore.topojson('/json/topo/st.topo.json', null, outline_layer).addTo(map);
-omnivore.topojson('/json/topo/st.topo.json', null, outline_layer1).addTo(map1);
+omnivore.topojson('/redistrict.science/json/topo/st.topo.json', null, outline_layer).addTo(map);
+omnivore.topojson('/redistrict.science/json/topo/st.topo.json', null, outline_layer1).addTo(map1);
 // now pane order controls layer ordering not the control!
 // L.control.layers({
 //     'OSM': L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map)
